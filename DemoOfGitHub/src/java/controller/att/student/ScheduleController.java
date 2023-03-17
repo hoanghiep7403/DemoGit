@@ -6,7 +6,7 @@ package controller.att.student;
 
 import controller.authentication.BaseRequiredAuthenticationController;
 import dal.CampusDBContext;
-import dal.StudentDBContext;
+import dal.LecturerDBContext;
 import dal.SlotDBContext;
 import java.io.IOException;
 import jakarta.servlet.ServletException;
@@ -20,12 +20,16 @@ import java.time.ZoneId;
 import java.util.ArrayList;
 import model.Account;
 import model.Campus;
-import model.Student;
+import model.Lecturer;
 import model.TimeSlot;
 import util.DateTimeHelper;
 
-@WebServlet(name = "TimetableController", urlPatterns = {"/timetable"})
-public class TimetableController extends BaseRequiredAuthenticationController {
+/**
+ *
+ * @author ADMIN
+ */
+@WebServlet(name = "ScheduleController", urlPatterns = {"/schedule"})
+public class ScheduleController extends BaseRequiredAuthenticationController {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -36,12 +40,13 @@ public class TimetableController extends BaseRequiredAuthenticationController {
         LocalDate then = LocalDate.from(oneWeek);
         int id = (int) request.getSession().getAttribute("id");
         String raw_from = request.getParameter("from");
-        String raw_to = request.getParameter("to");
-        StudentDBContext studbs = new StudentDBContext();
-        ArrayList<Student> stu = studbs.getStdCode(id);
-        request.setAttribute("stu", stu);
-        Student stud1 = stu.get(0);
+        String raw_to = request.getParameter("to");;
 
+        LecturerDBContext lecdb = new LecturerDBContext();
+        ArrayList<Lecturer> lec = lecdb.getStdCode(id);
+        request.setAttribute("lec", lec);
+        Lecturer currentLec = lec.get(0);
+        
         CampusDBContext camp = new CampusDBContext();
         ArrayList<Campus> camps = camp.search(id);
         request.setAttribute("camps", camps);
@@ -61,18 +66,13 @@ public class TimetableController extends BaseRequiredAuthenticationController {
         ArrayList<Date> dates = DateTimeHelper.getListDate(from, to);
         request.setAttribute("dates", dates);
 
-        StudentDBContext stuDB = new StudentDBContext();
-        model.Student student = stuDB.getTimeTable(stud1.getId(), from, to);
-        request.setAttribute("s", student);
+        LecturerDBContext lectureDB = new LecturerDBContext();
+        model.Lecturer lecturer = lectureDB.getTimeTable(currentLec.getId(), from, to);
+        request.setAttribute("l", lecturer);
 
-        request.getRequestDispatcher("view/attendance/timetable.jsp").forward(request, response);
+        request.getRequestDispatcher("view/attendance/schedule.jsp").forward(request, response);
 
     }
-
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response, Account acc) throws ServletException, IOException {

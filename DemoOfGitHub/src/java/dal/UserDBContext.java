@@ -10,74 +10,109 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.User;
+import model.Account;
+import model.Campus;
 
 /**
  *
- * @author sonnt
+ * @author ADMIN
  */
-public class UserDBContext extends DBContext<User> {
+public class UserDBContext extends DBContext<Account> {
 
-    public User get(String username, String password) {
+    public Account get(String username, String password, int campus) {
+        String sql = "SELECT accountID, username, [role] FROM Account\n"
+                + "WHERE username = ? AND [password] = ? AND campusid = ?";
         PreparedStatement stm = null;
         ResultSet rs = null;
-        String sql = "SELECT [username]\n"
-                + "      ,[password]\n"
-                + "      ,[displayname]\n"
-                + "  FROM [User]\n"
-                + "  WHERE [username] = ?\n"
-                + "  AND [password] = ?";
         try {
             stm = connection.prepareStatement(sql);
             stm.setString(1, username);
             stm.setString(2, password);
+            stm.setInt(3, campus);
             rs = stm.executeQuery();
-            
-            if(rs.next())
-            {
-                User s = new User();
-                s.setUsername(rs.getString("username"));
-                s.setDisplayname(rs.getString("displayname"));
-                return s;
+            if (rs.next()) {
+                Account a = new Account();
+                a.setAccID(rs.getInt("accountID"));
+                a.setUsername(username);
+                a.setRole(rs.getBoolean("role"));
+                Campus c = new Campus();
+                c.setId(campus);
+                a.setCampus(c);
+                return a;
             }
         } catch (SQLException ex) {
             Logger.getLogger(UserDBContext.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        finally {
+        } finally {
             try {
                 rs.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDBContext.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            try {
                 stm.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDBContext.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
                 connection.close();
             } catch (SQLException ex) {
-                Logger.getLogger(StudentDBContext.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(UserDBContext.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return null;
-        
+    }
+    public Account getUser(int accountID) {
+        String sql = "SELECT accountID, username, [role] FROM Account\n"
+                + "WHERE accountID = ?";
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            stm = connection.prepareStatement(sql);
+            stm.setInt(1, accountID);
+            rs = stm.executeQuery();
+            if (rs.next()) {
+                Account a = new Account();
+                a.setAccID(rs.getInt("accountID"));
+                a.setUsername(rs.getString("username"));
+                a.setRole(rs.getBoolean("role"));
+                return a;
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(UserDBContext.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                rs.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDBContext.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            try {
+                stm.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDBContext.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                connection.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(UserDBContext.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return null;
     }
 
     @Override
-    public void insert(User model) {
+    public void insert(Account model) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void update(User model) {
+    public void delete(Account model) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public void delete(User model) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public User get(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public ArrayList<User> all() {
+    public ArrayList<Account> all() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

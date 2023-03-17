@@ -1,54 +1,51 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package controller.authentication;
 
+import java.io.IOException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import model.User;
+import model.Account;
 
-/**
- *
- * @author sonnt
- */
 public abstract class BaseRequiredAuthenticationController extends HttpServlet {
 
     private boolean isAuthenticated(HttpServletRequest request) {
-        User user = (User) request.getSession().getAttribute("user");
-        return user != null;
+        return request.getSession().getAttribute("acc") != null;
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(isAuthenticated(req))
-        {
-            //do business
-            doPost(req, resp, (User) req.getSession().getAttribute("user"));
-        }
-        else
-        {
-            resp.getWriter().println("access denied!");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        if (isAuthenticated(request)) {
+            doGet(request, response, (Account) request.getSession().getAttribute("acc"));
+        } else {
+            response.getWriter().println("access denied!");
         }
     }
-    
-     protected abstract void doPost(HttpServletRequest req, HttpServletResponse resp, User user) throws ServletException, IOException;
+
+    protected abstract void doGet(HttpServletRequest request, HttpServletResponse response, Account acc)
+            throws ServletException, IOException;
+
+    protected abstract void doPost(HttpServletRequest request, HttpServletResponse response, Account acc)
+            throws ServletException, IOException;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        if(isAuthenticated(req))
-        {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        if (isAuthenticated(request)) {
             //do business
-            doGet(req, resp, (User) req.getSession().getAttribute("user"));
-        }
-        else
-        {
-            resp.getWriter().println("access denied!");
+            doPost(request, response, (Account) request.getSession().getAttribute("acc"));
+        } else {
+            response.getWriter().println("access denied!");
         }
     }
-    protected abstract void doGet(HttpServletRequest req, HttpServletResponse resp, User user) throws ServletException, IOException;
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
 
 }

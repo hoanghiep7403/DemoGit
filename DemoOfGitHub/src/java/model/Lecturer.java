@@ -4,34 +4,21 @@
  */
 package model;
 
-import java.sql.Date;
 import java.util.ArrayList;
 
 /**
  *
  * @author ADMIN
  */
-public class Student {
+public class Lecturer {
 
     private int id;
-    private String code;
     private String name;
+    private String code;
     private String img;
     private String email;
-    private int contact;
-    private boolean gender;
-    private Date dob;
     private Account account;
-    private Attendance attendance;
-    ArrayList<Group> groups = new ArrayList<>();
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    private ArrayList<Session> sessions = new ArrayList<>();
 
     public String getCode() {
         return code;
@@ -39,6 +26,14 @@ public class Student {
 
     public void setCode(String code) {
         this.code = code;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -65,36 +60,12 @@ public class Student {
         this.email = email;
     }
 
-    public int getContact() {
-        return contact;
+    public ArrayList<Session> getSessions() {
+        return sessions;
     }
 
-    public void setContact(int contact) {
-        this.contact = contact;
-    }
-
-    public boolean isGender() {
-        return gender;
-    }
-
-    public void setGender(boolean gender) {
-        this.gender = gender;
-    }
-
-    public Date getDob() {
-        return dob;
-    }
-
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
-
-    public ArrayList<Group> getGroups() {
-        return groups;
-    }
-
-    public void setGroups(ArrayList<Group> groups) {
-        this.groups = groups;
+    public void setSessions(ArrayList<Session> sessions) {
+        this.sessions = sessions;
     }
 
     public Account getAccount() {
@@ -103,14 +74,6 @@ public class Student {
 
     public void setAccount(Account account) {
         this.account = account;
-    }
-
-    public Attendance getAttendance() {
-        return attendance;
-    }
-
-    public void setAttendance(Attendance attendance) {
-        this.attendance = attendance;
     }
 
 }

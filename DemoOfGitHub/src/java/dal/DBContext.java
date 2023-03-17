@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author sonnt
+ * @author ADMIN
  */
 public abstract class DBContext<T> {
 
@@ -21,7 +21,7 @@ public abstract class DBContext<T> {
 
     public DBContext() {
         try {
-            String url = "jdbc:sqlserver://localhost\\HIEP7403:1433;databaseName=DemoTimetable1";
+            String url = "jdbc:sqlserver://localhost\\HIEP7403:1433;databaseName=PRJ_Assignment";
             String user = "hiep742003";
             String pass = "12345678";
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -35,11 +35,10 @@ public abstract class DBContext<T> {
 
     public abstract void insert(T model);
 
-    public abstract void update(T model);
+//    public abstract void update(T model);
 
     public abstract void delete(T model);
 
-    public abstract T get(int id);
-
     public abstract ArrayList<T> all();
+
 }

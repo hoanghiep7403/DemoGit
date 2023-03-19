@@ -70,13 +70,7 @@ h3 {
     padding: 10px;
     margin-bottom: 2px;
 }
-col-md-6.right_login{
-    align-content: center;
-    
-}
-right_login img{
-    size: 50px 50px;
-}
+
 a {
     color: Blue;
     text-decoration: none;
@@ -92,12 +86,17 @@ li {
 }
 
 table {
-    font-size: 13px;
+    font-size: 30px;
     background-color: #fff;
     border-collapse: collapse;
     width: 50%;
 }
-
+#loginform{
+    background-color: rgba(127,255,212, 0.5);
+}
+.col-md-6{
+    background-color: rgba(127,255,212, 0.5);
+}
 caption {
     color: #1b34b2;
     font-size: 25px;

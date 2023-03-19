@@ -8,30 +8,25 @@
         <title>JSP Page</title>
     </head>
     <style type="text/css">
-        
-
-        body {
-            background-image: url('logout_wallpaper.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-        }
-        
+       
         p{
             font-size: 50px;
             margin-right: 50px;
         }
         h1{
             margin-top: 200px;
-            border: 5px solid yellow;
-            background-color: rgba(160,82,45, 0.5);
-            color: whitesmoke;
+            color: black;
+            font-size: 50px;
         }
         span{
             margin-top: 200px;
-            border: 5px solid yellow;
-            background-color: rgba(160,82,45, 0.5);
+            font-size: 40px;
+            background-color: rgba(107,142,35, 0.5);
             color: whitesmoke;
+        }
+        h2{
+            color: black;
+            font-size: 40px;
         }
     </style>
     <body>
@@ -40,7 +35,7 @@
 
                 <h1>Log out successful!</h1>
                 <br/>
-                You will be directed to /login after <span id="time"></span> seconds
+                <h2>You will be directed to login page after <span id="time"></span> seconds</h2>
             </div>
             <script>
                 var count = 3;

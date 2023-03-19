@@ -70,7 +70,13 @@ h3 {
     padding: 10px;
     margin-bottom: 2px;
 }
-
+col-md-6.right_login{
+    align-content: center;
+    
+}
+right_login img{
+    size: 50px 50px;
+}
 a {
     color: Blue;
     text-decoration: none;
@@ -89,7 +95,7 @@ table {
     font-size: 13px;
     background-color: #fff;
     border-collapse: collapse;
-    width: 100%;
+    width: 50%;
 }
 
 caption {

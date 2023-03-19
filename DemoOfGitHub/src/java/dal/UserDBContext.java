@@ -13,10 +13,7 @@ import java.util.logging.Logger;
 import model.Account;
 import model.Campus;
 
-/**
- *
- * @author ADMIN
- */
+
 public class UserDBContext extends DBContext<Account> {
 
     public Account get(String username, String password, int campus) {

@@ -14,12 +14,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div class="container" style="margin-left: 200px">
+        <div class="container" style="margin-left: 100px">
             <div class="row" style="display: flex">
-                <div class="col-md-8" style="margin-left: 200px">
+                <div class="col-md-8" style="margin-left: 100px">
                     <h1><span>FPT University Academic Portal</span></h1>
                 </div>
-                <div class="col-md-4" style="margin-left: 400px">
+                <div class="col-md-4" style="margin-left: 200px">
                     <table>
                         <tr>
                             <td colspan="2" class="auto-style1"><strong>FAP mobile app (myFAP) is ready at</strong></td>
@@ -35,7 +35,7 @@
                     </table>
                 </div>
             </div>
-            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 200px; display: flex">
+            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 100px; display: flex">
                 <div class="col-md-6" style="text-align: left; display: flex">
                     <h3 style="margin-top: 8px; margin-left: 20px"><strong>View Schedule</strong></h3></a>
                 </div>
@@ -57,7 +57,7 @@
                     </c:forEach>
                 </div>
             </div>
-            <form style="margin-left: 200px" action="schedule" method="GET">
+            <form style="margin-left: 100px" action="schedule" method="GET">
                 <c:forEach items="${requestScope.stu}" var="s" varStatus="loop">          
                     <h1>Activities for ${s.code} (${s.name})</h1>
                 </c:forEach>
@@ -74,7 +74,7 @@
                     </thead>
                 </table>
             </form>
-            <div style="margin-left: 200px">
+            <div style="margin-left: 100px">
                 <c:if test="${requestScope.dates ne null}">
                     <table style="border: 2px solid black;" border="1px"> 
                         <tr style="background-color: orange">
@@ -112,7 +112,7 @@
                     </table>
                 </c:if>
             </div>
-            <div style="margin-bottom: 200px; margin-top: 100px" class="row">
+            <div style="margin-bottom: 100px; margin-top: 100px" class="row">
                 <div style="margin-left: 150px">
                     <b>Mọi góp ý, thắc mắc xin liên hệ: </b>
                     <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.333333969116211px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;">Phòng dịch vụ sinh viên</span>

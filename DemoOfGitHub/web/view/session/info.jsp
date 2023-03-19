@@ -1,8 +1,3 @@
-<%-- 
-    Document   : info
-    Created on : Mar 14, 2023, 9:40:09 PM
-    Author     : ADMIN
---%>
 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -14,12 +9,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div class="container" style="margin-left: 200px">
+        <div class="container" style="margin-left: 50px">
             <div class="row" style="display: flex">
-                <div class="col-md-8" style="margin-left: 200px">
+                <div class="col-md-8" style="margin-left: 100px">
                     <h1><span>FPT University Academic Portal</span></h1>
                 </div>
-                <div class="col-md-4" style="margin-left: 400px">
+                <div class="col-md-4" style="margin-left: 200px">
                     <table>
                         <tr>
                             <td colspan="2" class="auto-style1"><strong>FAP mobile app (myFAP) is ready at</strong></td>
@@ -35,7 +30,7 @@
                     </table>
                 </div>
             </div>
-            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 200px; display: flex">
+            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 100px; display: flex">
                 <div class="col-md-6" style="text-align: left; display: flex">
                     <c:if test="${requestScope.stu ne null}">
                         <c:forEach items="${requestScope.stu}" var="s" varStatus="loop">          
@@ -76,7 +71,7 @@
                     </c:forEach>
                 </div>
             </div>
-            <table style="margin-left: 200px;">
+            <table style="margin-left: 50px;">
                 <tbody>
                     <tr>
                         <td>

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
-        <servlet-name>InvalidController</servlet-name>
-        <servlet-class>controller.authentication.InvalidController</servlet-class>
+        <servlet-name>GroupController</servlet-name>
+        <servlet-class>controller.student.GroupController</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>LecturerController</servlet-name>
-        <servlet-class>controller.lecturer.LecturerController</servlet-class>
+        <servlet-name>StudentController</servlet-name>
+        <servlet-class>controller.student.StudentController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>InvalidController</servlet-name>
-        <url-pattern>/invalid</url-pattern>
+        <servlet-name>GroupController</servlet-name>
+        <url-pattern>/student/group</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LecturerController</servlet-name>
-        <url-pattern>/lecturer/info</url-pattern>
+        <servlet-name>StudentController</servlet-name>
+        <url-pattern>/student/search</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

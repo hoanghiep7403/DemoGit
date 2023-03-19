@@ -6,12 +6,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
-    <body> <div class="container" style="margin-left: 200px">
+    <body> <div class="container" style="margin-left: 100px">
             <div class="row" style="display: flex">
-                <div class="col-md-8" style="margin-left: 200px">
+                <div class="col-md-8" style="margin-left: 100px">
                     <h1><span>FPT University Academic Portal</span></h1>
                 </div>
-                <div class="col-md-4" style="margin-left: 400px">
+                <div class="col-md-4" style="margin-left: 200px">
                     <table>
                         <tr>
                             <td colspan="2" class="auto-style1"><strong>FAP mobile app (myFAP) is ready at</strong></td>
@@ -27,7 +27,7 @@
                     </table>
                 </div>
             </div>
-            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 200px; display: flex">
+            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 100px; display: flex">
                 <div class="col-md-6" style="text-align: left; display: flex">
                     <h3 style="margin-top: 8px; margin-left: 20px"><strong>View Schedule</strong></h3></a>
                 </div>
@@ -50,15 +50,15 @@
                 </div>
             </div>
             <form action="attendance" method="POST"> 
-                <table style="margin-left: 200px; margin-top: 50px; border: 2px solid black">
+                <table style="margin-left: 100px; margin-top: 50px; border: 2px solid black">
                     <thead>
                         <tr style="background-color: rgb(0, 179, 255);">
                             <th style="width: 80px; text-align: left;">INDEX</th>
                             <th style="width: 180px; text-align: left;">IMAGE</th>
                             <th style="width: 140px; text-align: left;">CODE</th>
                             <th style="width: 280px; text-align: left;">FULL NAME</th>
-                            <th style="width: 200px; text-align: left;">ATTENDANCE STATUS</td>
-                            <th style="width: 200px; text-align: left;">LECTURER'S COMMENT</td>
+                            <th style="width: 100px; text-align: left;">ATTENDANCE STATUS</td>
+                            <th style="width: 100px; text-align: left;">LECTURER'S COMMENT</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -92,7 +92,7 @@
                 <input type="hidden" name="sessionid" value="${param.sesid}"/>
                 <input style="width:  60px; height: 40px; margin-left: 1250px; border: solid black 1px; " type="submit" value="Save"/>
             </form>
-            <div style="margin-bottom: 200px; margin-top: 100px" class="row">
+            <div style="margin-bottom: 100px; margin-top: 100px" class="row">
                 <div style="margin-left: 150px">
                     <b>Mọi góp ý, thắc mắc xin liên hệ: </b>
                     <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.333333969116211px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;">Phòng dịch vụ sinh viên</span>

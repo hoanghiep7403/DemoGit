@@ -11,10 +11,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author ADMIN
- */
+
 public abstract class DBContext<T> {
 
     protected Connection connection;

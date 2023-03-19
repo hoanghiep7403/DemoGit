@@ -1,8 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : Mar 12, 2023, 5:34:50 AM
-    Author     : ADMIN
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,11 +13,29 @@
             .style1 {
                 font-weight: bold;
             }
+
+            body {
+                background-image: url('1271205.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+            }
+            legend{
+                font-size: 40px;
+                border: 2px solid #1b34b2;
+                border-radius: 2px;
+            }
+            p{
+                font-size: 50px;
+                margin-right: 50px;
+            }
         </style>
+
 
     </head>
 
     <body>
+       
         <div class="container">
 
             <div class="row">
@@ -61,7 +74,7 @@
                             <td>
                                 <div>
                                     <div style="height: 300px" class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-6">
                                             <div style="border: solid 1px #ccc; height: 200px;">
                                                 <fieldset>
                                                     <legend><span style="background-color: orange" class="label label-default  btn-warning"><b>Sinh viên, Giảng viên, Cán bộ ĐH-FPT</b></span></legend>
@@ -101,30 +114,17 @@
                                                     </div>
                                                 </fieldset>
                                             </div>
+                                            <div class="col-md-6">
+                                                <p>Welcome to FPTU Hoa Lac!</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </td>
                         </tr>
-                        <tr style="border-bottom: 0 none">
-                            <td>
-                                <br />
-                                <table width="100%" style="border: 1px solid transparent;" id="cssTable">
-                                    <tr>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <p style="text-align: center">
-                                                © Powered by <a href="" target="_blank">FPT University</a>&nbsp;|&nbsp;
-                                                <a href="" target="_blank">CMS</a>&nbsp;|&nbsp; <a href="" target="_blank">library</a>&nbsp;|&nbsp; <a href="" target="_blank">books24x7</a>
-                                                <span id="ctl00_lblHelpdesk"></span>
-                                            </p>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
+                        <p style="text-align: center">
+                            <h3>Make FPT great again!!!!</h3>
+                        </p>
                     </table>
                 </div>
             </div>

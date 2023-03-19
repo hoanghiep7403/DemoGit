@@ -23,12 +23,12 @@
     </head>
 
     <body>
-        <div class="container" style="margin-left: 200px">
+        <div class="container" style="margin-left: 50px">
             <div class="row" style="display: flex">
-                <div class="col-md-8" style="margin-left: 200px">
+                <div class="col-md-8" style="margin-left: 50px">
                     <h1><span>FPT University Academic Portal</span></h1>
                 </div>
-                <div class="col-md-4" style="margin-left: 400px">
+                <div class="col-md-4" style="margin-left: 200px">
                     <table>
                         <tr>
                             <td colspan="2" class="auto-style1"><strong>FAP mobile app (myFAP) is ready at</strong></td>
@@ -44,7 +44,7 @@
                     </table>
                 </div>
             </div>
-            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 200px; display: flex">
+            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 50px; display: flex">
                 <div class="col-md-6" style="text-align: left; display: flex">
                     <c:if test="${requestScope.stu ne null}">
                         <c:forEach items="${requestScope.stu}" var="s" varStatus="loop">          
@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="row" style="margin-top: 50px;">
-                <div style="margin-left: 200px;">
+                <div style="margin-left: 50px;">
                     <table style=" border: 2px solid black">
                         <caption style="text-align: left; font-size: large"><h1>Select a course, then a group...</h1></caption>
                         <thead style="background-color: rgb(0, 179, 255);">
@@ -150,16 +150,16 @@
             </div>
             <div class="row">
                 <c:if test="${requestScope.students ne null}">
-                    <table style="margin-left: 200px; margin-top: 50px; border: 2px solid black">
+                    <table style="margin-left: 50px; margin-top: 50px; border: 2px solid black">
                         <caption style="text-align: left; font-size: large;">...then see the student list</caption>
                         <thead>
                             <tr style="background-color: rgb(0, 179, 255);">
                                 <th style="width: 100px; text-align: left;">INDEX</th>
-                                <th style="width: 200px; text-align: left;">IMAGE</th>
+                                <th style="width: 50px; text-align: left;">IMAGE</th>
                                 <th style="width: 100px; text-align: left;">CODE</th>
                                 <th style="width: 280px; text-align: left;">FULL NAME</th>
-                                <th style="width: 200px; text-align: left;">Date of Birth</th>
-                                <th style="width: 200px; text-align: left;">Email</th>
+                                <th style="width: 50px; text-align: left;">Date of Birth</th>
+                                <th style="width: 50px; text-align: left;">Email</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -180,7 +180,7 @@
                     </table>
                 </c:if>                                                  
             </div>
-            <div style="margin-bottom: 200px; margin-top: 100px" class="row">
+            <div style="margin-bottom: 50px; margin-top: 100px" class="row">
                 <div style="margin-left: 150px">
                     <b>Mọi góp ý, thắc mắc xin liên hệ: </b>
                     <span style="color: rgb(34, 34, 34); font-family: arial, sans-serif; font-size: 13.333333969116211px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); display: inline !important; float: none;">Phòng dịch vụ sinh viên</span>

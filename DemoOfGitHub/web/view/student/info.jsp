@@ -1,8 +1,4 @@
-<%-- 
-    Document   : info
-    Created on : Mar 14, 2023, 9:40:09 PM
-    Author     : ADMIN
---%>
+
 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -19,7 +15,7 @@
                 <div class="col-md-8" style="margin-left: 200px">
                     <h1><span>FPT University Academic Portal</span></h1>
                 </div>
-                <div class="col-md-4" style="margin-left: 400px">
+                <div class="col-md-4" style="margin-left: 200px">
                     <table>
                         <tr>
                             <td colspan="2" class="auto-style1"><strong>FAP mobile app (myFAP) is ready at</strong></td>

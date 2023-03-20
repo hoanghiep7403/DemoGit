@@ -48,6 +48,9 @@
         tr{
             text-align: center;
         }
+        th{
+            text-align: center;
+        }
     </style>
     <body>
         <div class="container" style="margin-left: 50px">

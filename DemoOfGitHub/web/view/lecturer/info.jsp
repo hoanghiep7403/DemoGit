@@ -12,7 +12,6 @@
         .style1 {
             font-weight: bold;
         }
-
         body{
             background-image: url('870517.jpg');
             background-repeat: no-repeat;
@@ -50,6 +49,9 @@
             text-align: center;
             border: 2px solid black;
         }
+        th{
+            text-align: center;
+        }
     </style>
     <body>
         <div class="container" style="margin-left: 200px">
@@ -68,7 +70,7 @@
                             <a style="margin-left: 20px;" href="../schedule"><h3 style="margin-top: 8px;"><strong>Schedule</strong></h3></a>
                         </c:forEach>
                     </c:if>
-                    <h3 style="margin-top: 8px; margin-left: 20px"><strong>| User detail</strong></h3></div>
+                    <h3 style="margin-top: 8px; margin-left: 20px"><strong>| Lecturer detail</strong></h3></div>
                 <div class="col-md-6" style="margin-left: 400px">
                     <c:if test="${requestScope.stu ne null}">
                         <c:forEach items="${requestScope.stu}" var="s" varStatus="loop">          
@@ -101,7 +103,7 @@
                     <tr>
                         <td>
                             <div>
-                                <h2 style="margin-left: 35px">User detail</h2>
+                                <h2 style="margin-left: 35px">Lecturer detail</h2>
                             </div>
                             <table>
                                 <tbody>

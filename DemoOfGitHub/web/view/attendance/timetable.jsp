@@ -53,13 +53,16 @@
         tr{
             text-align: center;
         }
+        th{
+            text-align: center;
+        }
     </style>
     <body>
         <div class="container" style="margin-left: 100px">
             <div class="head_title">
                 <h1><span>FPT University Academic Portal</span></h1>
             </div>
-            <div class="row" style="background-color: rgb(234, 234, 234); height: 80px; width: 1100px; margin-top: 30px; margin-left: 100px; display: flex">
+            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 100px; display: flex">
                 <div class="col-md-8" style="text-align: left; display: flex">
                     <c:forEach items="${requestScope.stu}" var="s" varStatus="loop">          
                         <h3 style="margin-top: 8px; margin-left: 20px"><strong>View Timetable</strong></h3></a>
@@ -69,7 +72,7 @@
                 <div class="col-md-4" style="margin-left: 680px">
                     <c:forEach items="${requestScope.stu}" var="s" varStatus="loop">          
                         <button style="background-color: rgb(67, 205, 128); color: white">
-                            <a style="color: white" href="student/info">${s.account.accountName}</a>
+                            ${s.account.accountName}
                         </button>
                     </c:forEach>
 
@@ -88,8 +91,8 @@
             <form style="margin-left: 100px" action="timetable" method="GET">
                 <c:forEach items="${requestScope.stu}" var="s" varStatus="loop">          
                     <h1 style="width: 300px; height: 50px; margin-left: 100px; border: solid black 1px; border-radius: 3px; padding: 2px auto;
-                           background-color: aqua; color: black;
-                           font-size: 20px;">Activities for ${s.code} (${s.name})</h1>
+                        background-color: aqua; color: black;
+                        font-size: 20px;">Activities for ${s.code} (${s.name})</h1>
                 </c:forEach>
                 <table style="border: solid 2px black">
                     <thead>

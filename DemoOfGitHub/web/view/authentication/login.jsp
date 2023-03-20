@@ -83,7 +83,7 @@
                 padding: 10px 20px;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
-                margin-left: 60px;
+                margin-left: 150px;
             }
 
             button[type="submit"]:hover {
@@ -131,7 +131,6 @@
                   
                 </div>
                 <div class="action">
-                    <button type="submit">Register</button>
                     <button type="submit">Log in</button>
                 </div>
             </form>

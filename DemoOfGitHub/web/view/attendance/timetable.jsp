@@ -72,7 +72,7 @@
                 <div class="col-md-4" style="margin-left: 680px">
                     <c:forEach items="${requestScope.stu}" var="s" varStatus="loop">          
                         <button style="background-color: rgb(67, 205, 128); color: white">
-                            ${s.account.accountName}
+                            <a style="color: white" href="student/info">${s.account.accountName}</a>
                         </button>
                     </c:forEach>
 

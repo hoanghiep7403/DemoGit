@@ -8,8 +8,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
         <title>
             FPT Campus Portal
-        </title><link rel="Stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" type="text/css" /><link rel="Stylesheet" href="view/authentication/login.css" type="text/css" />
-        <link rel="Stylesheet" href="Content/bootstrap.css" type="text/css" /><link rel="Stylesheet" href="Content/bootstrap.min.css" type="text/css" />
+        </title><link rel="Stylesheet" href="view/authentication/login.css" type="text/css" />
+        
         <style type="text/css">
             .style1 {
                 font-weight: bold;

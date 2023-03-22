@@ -6,53 +6,55 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Lecturer Info</title>
+        <style type="text/css">
+            .style1 {
+                font-weight: bold;
+            }
+            body{
+                background-color: cyan;
+                background-image: url('870517.jpg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: 100% 120%;
+            }
+
+            p{
+                font-size: 50px;
+                margin-right: 50px;
+            }
+            td{
+                background-color: rgba(127,255,212, 0.5);
+                text-align: center;
+
+
+            }
+            .head_title{
+                border:2px solid white;
+                padding:5px;
+                margin-left: 300px;
+                background-color: rgba(107,142,35, 0.5);
+                align-content: center;
+                width:500px;
+                height:100px;
+                border-radius: 3px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            span{
+                align-content: center;
+                color: whitesmoke;
+                margin-left: 20px;
+            }
+            tr{
+                text-align: center;
+                border: 2px solid black;
+            }
+            th{
+                text-align: center;
+            }
+        </style>
     </head>
-    <style type="text/css">
-        .style1 {
-            font-weight: bold;
-        }
-        body{
-            background-image: url('870517.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 120%;
-        }
 
-        p{
-            font-size: 50px;
-            margin-right: 50px;
-        }
-        td{
-            background-color: rgba(127,255,212, 0.5);
-            text-align: center;
-
-
-        }
-        .head_title{
-            border:2px solid white;
-            padding:5px;
-            margin-left: 300px;
-            background-color: rgba(107,142,35, 0.5);
-            align-content: center;
-            width:500px;
-            height:100px;
-            border-radius: 3px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        span{
-            align-content: center;
-            color: whitesmoke;
-            margin-left: 20px;
-        }
-        tr{
-            text-align: center;
-            border: 2px solid black;
-        }
-        th{
-            text-align: center;
-        }
-    </style>
     <body>
         <div class="container" style="margin-left: 200px">
             <div class="head_title">
@@ -98,7 +100,7 @@
                     </c:forEach>
                 </div>
             </div>
-            <table style="margin-left: 100px; border: 2px solid black; border-radius: 2px;">
+            <table style="margin-top: 30px;margin-left: 320px; border: 2px solid black; border-radius: 2px;">
                 <tbody>
                     <tr>
                         <td>
@@ -109,8 +111,8 @@
                                 <tbody>
                                     <c:forEach items="${requestScope.lec}" var="l" varStatus="loop">
                                         <tr>
-                                            <td style="width: 450px"><b>Login</b></td>
-                                            <td style="width: 450px; border-bottom: solid lightgray 1px">${l.account.accountName}</td>
+                                            <td style="width: 200px"><b>Username</b></td>
+                                            <td style="width: 250px; border-bottom: solid lightgray 1px">${l.account.accountName}</td>
                                         </tr>
                                         <tr>
                                             <td style=" border-bottom: solid lightgray 1px"><b>Full name</b></td>

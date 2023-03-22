@@ -11,19 +11,16 @@
             <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
             <title>
-
+                Student Group Info
             </title>
-            <link rel="Stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" type="text/css" />
+
             <style type="text/css">
                 .style1 {
                     font-weight: bold;
                 }
 
                 body{
-                    background-image: url('870517.jpg');
-                    background-repeat: no-repeat;
-                    background-attachment: fixed;
-                    background-size: 100% 120%;
+                    background-color: cyan;
                 }
 
                 p{
@@ -53,6 +50,7 @@
                 }
                 tr{
                     text-align: center;
+                    border: 2px solid black;
                 }
                 th{
                     text-align: center;
@@ -61,11 +59,11 @@
     </head>
 
     <body>
-        <div class="container" style="margin-left: 50px">
+        <div class="container" style="margin-left: 100px">
             <div class="head_title">
                 <h1><span>FPT University Academic Portal</span></h1>
             </div>
-            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 50px; display: flex">
+            <div class="row" style="background-color: rgb(234, 234, 234); height: 40px; width: 1100px; margin-top: 30px; margin-left: 100px; display: flex">
                 <div class="col-md-6" style="text-align: left; display: flex">
                     <c:if test="${requestScope.stu ne null}">
                         <c:forEach items="${requestScope.stu}" var="s" varStatus="loop">          
@@ -108,7 +106,7 @@
             </div>
             <div class="row" style="margin-top: 50px;">
                 <div style="margin-left: 50px;">
-                    <table style=" border: 2px solid black">
+                    <table style="border: 2px solid black; border-radius: 2px;">
                         <caption style="text-align: left; font-size: large"><h1>Select a course, then a group...</h1></caption>
                         <thead style="background-color: rgb(0, 179, 255);">
                             <tr>

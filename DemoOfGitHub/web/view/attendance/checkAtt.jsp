@@ -12,9 +12,7 @@
             Check Attendance
         </title>
 
-
-    </head>
-    <style type="text/css">
+        <style type="text/css">
         .style1 {
             font-weight: bold;
         }
@@ -56,7 +54,21 @@
         th{
             text-align: center;
         }
-    </style>
+        caption{
+            border:2px solid white;
+            padding:5px;
+            margin-left: 100px;
+            background-color: rgba(107,142,35, 0.5);
+            align-content: center;
+            width:500px;
+            height:100px;
+            border-radius: 3px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: whitesmoke;
+        }
+        </style>
+    </head>
+    
     <body>
         <div class="container" style="margin-left: 100px">
 
@@ -87,13 +99,12 @@
             </div>
             <div class="row" style="margin-top: 100px; display: flex">
                 <div>
-                    <table style=" border: 2px solid black; margin-top: 40px">
-                        <caption style="text-align: center; font-size: large"><h1>Select a campus/program, term, course</h1></caption>
+                    <table style=" border: 2px solid black; margin-top: 40px;">
+                        <caption style="text-align: center; font-size: large"><h1>Select a course</h1></caption>
                         <thead style="background-color: rgb(0, 179, 255);">
                             <tr>
-                                <th scope="col" style="width: 100px; text-align: left;">Campus</th>
-                                <th scope="col" style="width: 100px; text-align: left;">Term</th>
-                                <th scope="col" style="width: 420px; text-align: left;">Course</th>
+                                <th scope="col" style="width: 100px; text-align: center;">Campus</th>
+                                <th scope="col" style="width: 420px; text-align: center;">Course</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -107,7 +118,6 @@
                             </tr>
                     </table> 
                     </td>
-                    <td valign="top"></td>
                     <td valign="top">
                         <table border="1">
                             <tr>
@@ -123,18 +133,18 @@
                 </div>
                 <div>
                     <table style=" border: 2px solid black">
-                        <caption style="text-align: center; font-size: large; margin-left: 40px; margin-bottom: 24px"><h1>Record of Attendance here</h1></caption>
+                        <caption style="text-align: center; font-size: large; margin-left: 200px; margin-bottom: 24px"><h1>Record of Attendance here</h1></caption>
                         <br/>
                         <thead style="background-color: rgb(0, 179, 255);">
                             <tr>
-                                <th scope="col" style="height: 50px;width: 40px; text-align: left;">NO</th>
-                                <th scope="col" style="width: 170px; text-align: left;">DATE</th>
-                                <th scope="col" style="width: 110px; text-align: left;">SLOT</th>
-                                <th scope="col" style="width: 60px; text-align: left;">ROOM</th>
-                                <th scope="col" style="width: 100px; text-align: left;">LECTURER</th>
-                                <th scope="col" style="width: 80px; text-align: left;">GROUP NAME</th>
-                                <th scope="col" style="width: 120px; text-align: left;">ATTENDANCE STATUS</th>
-                                <th scope="col" style="width: 120px; text-align: left;">LECTURER'S COMMENT</th>
+                                <th scope="col" style="height: 50px;width: 40px; text-align: center;">NO</th>
+                                <th scope="col" style="width: 170px; text-align: center;">DATE</th>
+                                <th scope="col" style="width: 110px; text-align: center;">SLOT</th>
+                                <th scope="col" style="width: 60px; text-align: center;">ROOM</th>
+                                <th scope="col" style="width: 100px; text-align: center;">LECTURER</th>
+                                <th scope="col" style="width: 80px; text-align: center;">GROUP NAME</th>
+                                <th scope="col" style="width: 120px; text-align: center;">ATTENDANCE STATUS</th>
+                                <th scope="col" style="width: 120px; text-align: center;">LECTURER'S COMMENT</th>
                             </tr>
                         </thead>
                         <tbody>

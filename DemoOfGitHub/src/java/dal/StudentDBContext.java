@@ -274,4 +274,54 @@ public class StudentDBContext extends DBContext<Student> {
         }
         return student;
     }
+    public ArrayList<Student> searchBySes(int session) {
+        ArrayList<Student> students = new ArrayList<>();
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        try {
+            String sql = "SELECT s.[sid], s.scode, s.sname, s.Img, s.Email, s.Contact, s.Gender, s.Dob, s.accountID\n"
+                    + "FROM Student s INNER JOIN Student_Group sg\n"
+                    + "ON s.[sid] = sg.[sid]\n"
+                    + "INNER JOIN [Group] g ON g.gid = sg.gid\n"
+                    + "INNER JOIN [Session] ses ON ses.gid = g.gid\n"
+                    + "WHERE ses.sessionid = ?\n";
+            stm = connection.prepareStatement(sql);
+            stm.setInt(1, session);
+            rs = stm.executeQuery();
+
+            while (rs.next()) {
+                Student s = new Student();
+                s.setId(rs.getInt("sid"));
+                s.setCode(rs.getString("scode"));
+                s.setName(rs.getString("sname"));
+                s.setImg(rs.getString("Img"));
+                s.setEmail(rs.getString("Email"));
+                s.setContact(rs.getInt("Contact"));
+                s.setGender(rs.getBoolean("Gender"));
+                s.setDob(rs.getDate("Dob"));
+
+                students.add(s);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentDBContext.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                rs.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(StudentDBContext.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            try {
+                stm.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(StudentDBContext.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                connection.close();
+            } catch (SQLException ex) {
+                Logger.getLogger(StudentDBContext.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return students;
+    }
 }
